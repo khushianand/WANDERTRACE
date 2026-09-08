@@ -1,0 +1,4 @@
+package com.wandertrace.dto;
+import jakarta.validation.constraints.*;
+import java.time.LocalDate; import java.util.*;
+public final class TripDtos {private TripDtos(){} public record Trip(UUID id,String title,String description,LocalDate startDate,LocalDate endDate,String coverImageUrl,String membershipRole){} public record CreateTrip(@NotBlank @Size(max=255) String title,@Size(max=5000) String description,LocalDate startDate,LocalDate endDate,String coverImageUrl){} public record UpdateTrip(@NotBlank @Size(max=255) String title,@Size(max=5000) String description,LocalDate startDate,LocalDate endDate,String coverImageUrl){} public record AddMember(@Email @NotBlank String email,@Pattern(regexp="EDITOR|VIEWER") String role){} public record UpdateMember(@Pattern(regexp="EDITOR|VIEWER") String role){} public record Member(UUID userId,String email,String displayName,String role){} }
