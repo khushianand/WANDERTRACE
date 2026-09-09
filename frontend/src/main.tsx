@@ -1,0 +1,2 @@
+import React from 'react'; import {createRoot} from 'react-dom/client'; import {BrowserRouter,Routes,Route} from 'react-router-dom'; import {Home} from './pages/Home'; import {MemoryPage} from './pages/MemoryPage'; import './styles.css';
+createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter><Routes><Route path="/" element={<Home/>}/><Route path="/explore" element={<Home/>}/><Route path="/m/:token" element={<MemoryPage/>}/></Routes></BrowserRouter></React.StrictMode>);

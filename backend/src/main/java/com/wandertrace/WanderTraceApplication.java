@@ -1,0 +1,1 @@
+package com.wandertrace; import org.springframework.boot.SpringApplication; import org.springframework.boot.autoconfigure.SpringBootApplication; @SpringBootApplication public class WanderTraceApplication { public static void main(String[] args){SpringApplication.run(WanderTraceApplication.class,args);} }
